@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+
+<head>
+   <title>Delighters</title>
+   <meta name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+   <link href="style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+   <article>
+      <section data-delighter class="splash">
+         <h1 data-delighter class="right">There is ALWAYS a BETTER WAY</h1>
+         <h2 data-delighter class="left">I am NOT discouraged, because every wrong attempt discarded is another step
+            FORWARD.</h2>
+      </section>
+      <section data-delighter="start:0.3">
+         <div class="box">1. Include the script</div>
+         <div class="box">2. Add data-delighter attributes</div>
+         <div class="box">3. Write your own CSS delighters</div>
+      </section>
+      <section>
+         <h2 data-delighter class="right">Features</h2>
+         <ul data-delighter>
+            <li>Declarative</li>
+            <li>Flexible</li>
+            <li>Light footprint</li>
+            <li>Framework-agnostic</li>
+            <li>Supports desktop, mobile &amp; tablets</li>
+            <li>Degrades gracefully to your default styling</li>
+         </ul>
+      </section>
+      <section data-delighter="start:0.25">
+         <h2 data-delighter class="left">Usage</h2>
+         <p>1. Include the script</p>
+         <pre>
+   &lt;script type="text/javascript" src="delighters.js"></pre>
+         <p>2. Add delighter attributes</p>
+         <pre>
+   &lt;div class="foo" data-delighter></pre>
+         <p>
+            3. Style the delighter (or its children) using built-in classes
+            <code>.started</code> and <code>.ended</code>
+         </p>
+         <pre>
+   /* when the library loads, each [data-delighter] 
+      gets the .delighter class */
+
+   .foo.delighter {
+      transition: all .3s ease-out;
+      transform: translateX(-100%);
+      opacity: 0;
+   }
+
+   /* the .started class is set when the top
+      of [data-delighter] is at 0.75 of the viewport 
+      (where 0 is top and 1 is bottom) */
+
+   .foo.delighter.started {
+      transform: none;
+      opacity: 1;
+   }
+
+   /* an extra .ended state is set when the bottom 
+      of [data-delighter] is at 0.75 of the viewport
+      (where 0 is top and 1 is bottom) */
+
+   .foo.delighter.started.ended {
+      border: solid red 10px;
+   }</pre>
+      </section>
+      <section>
+         <h2 data-delighter class="right">How it works</h2>
+         <ul data-delighter>
+            <li>Delighters.js toggles classes when you scroll down. You do the rest!</li>
+            <li>Each delighter gets a <code>.started</code> class when its <b>top</b> raises above 75% of the browser's
+               viewport height</li>
+            <li>When the <b>bottom</b> of the delighter is at 75%, an extra class <code>.ended</code> is added</li>
+            <li>You can change any of these like so: <code>data-delighter="start:0.5;end:0.95;</code></li>
+            <li>Remember: 0 = top, 1 = bottom</li>
+            <li>Values outside the viewport are allowed, such as <code>start:1.2;end:-0.3</code></li>
+         </ul>
+      </section>
+
+      <section data-delighter>
+         <h2 data-d="right">Customizing</h2>
+         <p>
+            By default, delighters.js intializes automatically when the DOM is ready, and with the following
+            configuration:
+         </p>
+         <pre>
+  options = {
+    attribute:  'data-delighter',
+    classNames: ['delighter', 'started', 'ended'],
+    start:      0.75, // default start threshold
+    end:        0.75, // default end threshold
+    autoInit:   true  // initialize when DOMContentLoaded
+  }</pre>
+         <p>
+            You can customize any or all of the above properties using:
+            <pre>
+  Delighters.config({    
+    // set the default start threshold at the bottom
+    start: 1,
+    // let's call Delighters.init() manually later
+    autoInit: false 
+    // ... etc ...
+  })</pre>
+      </section>
+      <section>
+         <h1 data-delighter class="bottom">Enjoy!</h1>
+
+<!------------------------------ Sign Up and Sign In ------------------------------->
+
+         <div class="form">
+
+            <ul class="tab-group">
+               <li class="tab active"><a href="#signup">Sign Up</a></li>
+               <li class="tab"><a href="#login">Log In</a></li>
+            </ul>
+
+            <div class="tab-content">
+               <div id="signup">
+                  <h1>Sign Up for Free</h1>
+
+                  <form action="/" method="post">
+
+                     <div class="top-row">
+                        <div class="field-wrap">
+                           <label>
+                              First Name<span class="req">*</span>
+                           </label>
+                           <input type="text" required autocomplete="off" />
+                        </div>
+
+                        <div class="field-wrap">
+                           <label>
+                              Last Name<span class="req">*</span>
+                           </label>
+                           <input type="text" required autocomplete="off" />
+                        </div>
+                     </div>
+
+                     <div class="field-wrap">
+                        <label>
+                           Email Address<span class="req">*</span>
+                        </label>
+                        <input type="email" required autocomplete="off" />
+                     </div>
+
+                     <div class="field-wrap">
+                        <label>
+                           Set A Password<span class="req">*</span>
+                        </label>
+                        <input type="password" required autocomplete="off" />
+                     </div>
+
+                     <button type="submit" class="button button-block" />Get Started</button>
+
+                  </form>
+
+               </div>
+
+               <div id="login">
+                  <h1>Welcome Back!</h1>
+
+                  <form action="/" method="post">
+
+                     <div class="field-wrap">
+                        <label>
+                           Email Address<span class="req">*</span>
+                        </label>
+                        <input type="email" required autocomplete="off" />
+                     </div>
+
+                     <div class="field-wrap">
+                        <label>
+                           Password<span class="req">*</span>
+                        </label>
+                        <input type="password" required autocomplete="off" />
+                     </div>
+
+                     <p class="forgot"><a href="#">Forgot Password?</a></p>
+
+                     <button class="button button-block" />Log In</button>
+
+                  </form>
+
+               </div>
+
+            </div><!-- tab-content -->
+
+         </div> <!-- /form -->
+      </section>
+   </article>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script type="text/javascript" src="delighters.js"></script>
+</body>
+
+</html>
