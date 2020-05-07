@@ -81,6 +81,7 @@ a {
   transform: translate(-100%);
   opacity: 0;
   transition: all .75s ease-out;
+  font-size: 10rem;
 }
 
 .delighter.right.started {
@@ -103,6 +104,7 @@ a {
   transform: translatey(300%);
   opacity: 0;
   transition: all .75s ease-out;
+  font-size: 5rem;
 }
 
 .delighter.bottom.started {
