@@ -9,6 +9,88 @@
 </head>
 
 <body>
+   <!------------------------------ Sign Up and Sign In ------------------------------->
+   <div class="form">
+
+      <ul class="tab-group">
+         <li class="tab active"><a href="#signup">Sign Up</a></li>
+         <li class="tab"><a href="#login">Log In</a></li>
+      </ul>
+
+      <div class="tab-content">
+         <div id="signup">
+            <h1>Sign Up for Free</h1>
+
+            <form action="/" method="post">
+
+               <div class="top-row">
+                  <div class="field-wrap">
+                     <label>
+                        First Name<span class="req">*</span>
+                     </label>
+                     <input type="text" required autocomplete="off" />
+                  </div>
+
+                  <div class="field-wrap">
+                     <label>
+                        Last Name<span class="req">*</span>
+                     </label>
+                     <input type="text" required autocomplete="off" />
+                  </div>
+               </div>
+
+               <div class="field-wrap">
+                  <label>
+                     Email Address<span class="req">*</span>
+                  </label>
+                  <input type="email" required autocomplete="off" />
+               </div>
+
+               <div class="field-wrap">
+                  <label>
+                     Set A Password<span class="req">*</span>
+                  </label>
+                  <input type="password" required autocomplete="off" />
+               </div>
+
+               <button type="submit" class="button button-block" />Get Started</button>
+
+            </form>
+
+         </div>
+
+         <div id="login">
+            <h1>Welcome Back!</h1>
+
+            <form action="/" method="post">
+
+               <div class="field-wrap">
+                  <label>
+                     Email Address<span class="req">*</span>
+                  </label>
+                  <input type="email" required autocomplete="off" />
+               </div>
+
+               <div class="field-wrap">
+                  <label>
+                     Password<span class="req">*</span>
+                  </label>
+                  <input type="password" required autocomplete="off" />
+               </div>
+
+               <p class="forgot"><a href="#">Forgot Password?</a></p>
+
+               <button class="button button-block" />Log In</button>
+
+            </form>
+
+         </div>
+
+      </div><!-- tab-content -->
+
+   </div> <!-- /form -->
+  
+   <!---------------------------------------------- ここまでSignUp SignIn ------------------------------------------------------>
    <article>
       <section data-delighter class="splash">
          <h1 data-delighter class="right">To do is to be.</h1>
@@ -68,7 +150,9 @@
             <li>ユーザーはこのアプリをこんなふうに使っています</li>
             <li>画像添えて。 <br> 健康やフィットネスでデンタルフロスを使う気が起きませんか？　ジムに行きたくないですか？最終的にそれらを楽しみに変えて、健康にしてくれます</li>
             <li>画像添えて。 <br> 学校や仕事で先生や上司へのレポートを用意する時でも、手ごわいタスクに取り組んでいる間の進捗を記録するのは簡単です</li>
-            <li>画像添えて。 <br> そして他にもたくさん！完全にカスタム可能なタスクリストで、あなたの個人的な目標に合わせてHabiticaをカスタマイズできます。クリエイティブなプロジェクトに取り組んだり、セルフケアに力を入れたり、違う夢を追いかけたり -- 全てはあなた次第です。</li>
+            <li>画像添えて。 <br>
+               そして他にもたくさん！完全にカスタム可能なタスクリストで、あなたの個人的な目標に合わせてHabiticaをカスタマイズできます。クリエイティブなプロジェクトに取り組んだり、セルフケアに力を入れたり、違う夢を追いかけたり
+               -- 全てはあなた次第です。</li>
             <li>画像添えて。 <br> どこでもレベルアップ</li>
             <li>モバイルアプリで出先でも簡単にタスクを記録できます。タップ一つでどこでも目標を達成しましょう。</li>
          </ul>
@@ -90,7 +174,7 @@
   }</pre>
          <p>
             You can customize any or all of the above properties using:
-            <pre>
+         <pre>
   Delighters.config({    
     // set the default start threshold at the bottom
     start: 1,
@@ -99,92 +183,13 @@
     // ... etc ...
   })</pre>
       </section>
-      <section>
+      <section class='yeah'>
          <h1 data-delighter class="bottom">There Is Always a Better Way</h1>
-
-<!------------------------------ Sign Up and Sign In ------------------------------->
-
-         <div class="form">
-
-            <ul class="tab-group">
-               <li class="tab active"><a href="#signup">Sign Up</a></li>
-               <li class="tab"><a href="#login">Log In</a></li>
-            </ul>
-
-            <div class="tab-content">
-               <div id="signup">
-                  <h1>Sign Up for Free</h1>
-
-                  <form action="/" method="post">
-
-                     <div class="top-row">
-                        <div class="field-wrap">
-                           <label>
-                              First Name<span class="req">*</span>
-                           </label>
-                           <input type="text" required autocomplete="off" />
-                        </div>
-
-                        <div class="field-wrap">
-                           <label>
-                              Last Name<span class="req">*</span>
-                           </label>
-                           <input type="text" required autocomplete="off" />
-                        </div>
-                     </div>
-
-                     <div class="field-wrap">
-                        <label>
-                           Email Address<span class="req">*</span>
-                        </label>
-                        <input type="email" required autocomplete="off" />
-                     </div>
-
-                     <div class="field-wrap">
-                        <label>
-                           Set A Password<span class="req">*</span>
-                        </label>
-                        <input type="password" required autocomplete="off" />
-                     </div>
-
-                     <button type="submit" class="button button-block" />Get Started</button>
-
-                  </form>
-
-               </div>
-
-               <div id="login">
-                  <h1>Welcome Back!</h1>
-
-                  <form action="/" method="post">
-
-                     <div class="field-wrap">
-                        <label>
-                           Email Address<span class="req">*</span>
-                        </label>
-                        <input type="email" required autocomplete="off" />
-                     </div>
-
-                     <div class="field-wrap">
-                        <label>
-                           Password<span class="req">*</span>
-                        </label>
-                        <input type="password" required autocomplete="off" />
-                     </div>
-
-                     <p class="forgot"><a href="#">Forgot Password?</a></p>
-
-                     <button class="button button-block" />Log In</button>
-
-                  </form>
-
-               </div>
-
-            </div><!-- tab-content -->
-
-         </div> <!-- /form -->
+         <h4 class='buruburu'><a href="#">Let’s get started.</a></h4>
       </section>
    </article>
+
+
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script type="text/javascript" src="delighters.js"></script>
 </body>
